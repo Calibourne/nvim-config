@@ -30,10 +30,6 @@ return {
         dotfiles = true,
         custom = {},
       },
-      -- add hotkey to toggle the tree on <C-t>
-      mappings = {
-        ["<C-t>"] = "toggle"
-      }
     }
     vim.keymap.set('n', '<leader>ff', ':Neotree focus<CR>', { desc = '[F]ilesystem [F]ocus' })
     vim.keymap.set('n', '<leader>ft', ':Neotree toggle<CR>', { desc = '[F]ilesystem [T]oggle' })
