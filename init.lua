@@ -68,7 +68,6 @@ vim.opt.rtp:prepend(lazypath)
 --    as they will be available in your neovim runtime.
 require('lazy').setup({
   -- NOTE: First, some plugins that don't require any configuration
-
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
@@ -145,7 +144,6 @@ require('lazy').setup({
           opts.buffer = bufnr
           vim.keymap.set(mode, l, r, opts)
         end
-
         -- Navigation
         map({ 'n', 'v' }, ']c', function()
           if vim.wo.diff then
@@ -206,11 +204,10 @@ require('lazy').setup({
     priority = 1000,
     lazy = false,
     config = function()
-      require('onedark').setup {
+      require('onedark').setup({
         -- Set a style preset. 'dark' is default.
         style = 'dark', -- dark, darker, cool, deep, warm, warmer, light
-      }
-      require('onedark').load()
+      })
     end,
   },
 
@@ -686,8 +683,8 @@ cmp.setup {
   },
 }
 
-vim.cmd("colorscheme fluoromachine")
-vim.cmd("colorscheme codedark")
+-- vim.cmd("colorscheme fluoromachine")
+-- vim.cmd("colorscheme codedark")
 vim.cmd("colorscheme doom-one")
 
 -- The line beneath this is called `modeline`. See `:help modeline`
